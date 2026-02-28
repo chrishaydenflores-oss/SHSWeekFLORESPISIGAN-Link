@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --lcba-blue: #395B73;
+    --lcba-dark: #2c3e50;
+    --lcba-white: #ffffff;
+    --accent-blue: #3498db;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background: linear-gradient(135deg, #395B73 0%, #1a2a33 100%);
+    background-attachment: fixed;
+    color: #333;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* Fixed path based on your folder structure */
+    background-image: url('LCBA Photos/LCBABackground.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px) brightness(0.7);
+    z-index: -1;
+    transform: scale(1.1);
+}
+
+.headOne {
+    background-color: rgba(44, 62, 80, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    position: fixed;
+    top: 0; width: 100%; z-index: 1000;
+}
+
+.ulTag {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.ulTag a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.mainOne {
+    display: grid;
+    gap: 20px;
+    padding: 30px;
+    grid-template-columns: 150px 1fr 300px;
+    margin-top: 80px;
+}
+
+.boxHolders {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+section {
+    background-color: var(--lcba-white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+/* Slideshow Dots */
+.dot { height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; }
+.active { background-color: var(--accent-blue); }
+.mySlides { display: none; }
+
+.strand-details img {
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    object-fit: cover;
+    margin: 15px auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.grid-container img {
+    width: 100%; height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.sideBar1 {
+    background-color: var(--lcba-white);
+    padding: 20px;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.dev-flex { display: flex; justify-content: center; gap: 40px; }
+.dev-card img {
+    width: 130px; height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-blue);
+}
